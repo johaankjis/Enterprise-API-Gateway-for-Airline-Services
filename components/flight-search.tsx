@@ -43,7 +43,7 @@ export function FlightSearch() {
       const data = await response.json()
       setFlights(data.flights || [])
     } catch (error) {
-      console.error("[v0] Error searching flights:", error)
+      console.error("[] Error searching flights:", error)
     } finally {
       setLoading(false)
     }
@@ -86,7 +86,7 @@ export function FlightSearch() {
         alert(data.error || "Booking failed")
       }
     } catch (error) {
-      console.error("[v0] Error booking flight:", error)
+      console.error("[] Error booking flight:", error)
       alert("Failed to book flight")
     } finally {
       setBookingLoading(false)
